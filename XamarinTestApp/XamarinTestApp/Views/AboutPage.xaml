@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinTestApp.Views.AboutPage"
+             xmlns:theme="clr-namespace:XamarinTestApp.Services"
+             xmlns:vm="clr-namespace:XamarinTestApp.ViewModels" xmlns:views="http://xamarin.com/schemas/2020/toolkit"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+
+            <ControlTemplate x:Key="RadioButtonTemplate">
+                <Frame BorderColor="#F3F2F1"
+                   BackgroundColor="#F3F2F1"
+                   HasShadow="False"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   Padding="0">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CheckedStates">
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter Property="BorderColor"
+                                            Value="#FF3300" />
+                                        <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor"
+                                            Value="#F3F2F1" />
+                                        <Setter Property="BorderColor"
+                                            Value="#F3F2F1" />
+                                        <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="0" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <Grid Margin="4"
+                      WidthRequest="100">
+                        <Grid WidthRequest="18"
+                          HeightRequest="18"
+                          HorizontalOptions="End"
+                          VerticalOptions="Start">
+                            <Ellipse Stroke="Blue"
+                                 Fill="White"
+                                 WidthRequest="16"
+                                 HeightRequest="16"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                            <Ellipse x:Name="check"
+                                 Fill="Blue"
+                                 WidthRequest="8"
+                                 HeightRequest="8"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                        </Grid>
+                        <ContentPresenter />
+                    </Grid>
+                </Frame>
+            </ControlTemplate>
+
+            <Style TargetType="RadioButton">
+                <Setter Property="ControlTemplate"
+                    Value="{StaticResource RadioButtonTemplate}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Start developing now" FontSize="Title"/>
+                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
+                <Label FontSize="16" Padding="0,24,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Learn more at "/>
+                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="0,10,0,0" Text="Learn more"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+
+
+        </ScrollView>
+        <!--<StackLayout Orientation="Horizontal" Grid.Row="2">
+            <RadioButton ControlTemplate="{StaticResource RadioButtonTemplate}" IsChecked="True">
+                <RadioButton.Content>
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Scale="0.75" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static theme:IconFont.Image}, Color=#323130}" />
+                        <Label FontSize="Small" Text="System" TextColor="#323130" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton ControlTemplate="{StaticResource RadioButtonTemplate}" Grid.Column="1">
+                <RadioButton.Content>
+                    <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Scale="0.75" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static theme:IconFont.Sun}, Color=#323130}" />
+                        <Label FontSize="Small" Text="Light" TextColor="#323130" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton ControlTemplate="{StaticResource RadioButtonTemplate}" Grid.Column="2">
+                <RadioButton.Content>
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Scale="0.75" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static theme:IconFont.Moon}, Color=#323130}" />
+                        <Label FontSize="Small" Text="Dark" TextColor="#323130" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+        </StackLayout>-->
+
+        <views:MediaElement x:Name="Media" HeightRequest="200" Grid.Row="2"/>
+    </Grid>
+
+</ContentPage>

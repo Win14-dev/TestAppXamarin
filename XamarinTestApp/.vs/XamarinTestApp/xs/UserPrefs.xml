@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{4F9D31B7-A9BA-4741-AB26-FC739DD76E8B}|Default">
+  <MonoDevelop.Ide.ItemProperties.XamarinTestApp.Android FirstBuild="True" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinTestApp/Views/AboutPage.xaml.cs">
+    <Files>
+      <File FileName="XamarinTestApp/Views/AboutPage.xaml" Line="112" Column="40" />
+      <File FileName="XamarinTestApp/Services/IconFont.cs" Line="553" Column="29" />
+      <File FileName="XamarinTestApp.iOS/Main.cs" Line="18" Column="14" />
+      <File FileName="XamarinTestApp/Views/AboutPage.xaml.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XamarinTestApp" expanded="True">
+            <Node name="XamarinTestApp" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="AboutPage.xaml" expanded="True">
+                  <Node name="AboutPage.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="XamarinTestApp.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.XamarinTestApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.816070E6-D0D5-4F20-9639-ADB2A72A347B" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/bhautik/Documents/XamarinTestApp/XamarinTestApp.iOS/Main.cs" relfile="XamarinTestApp.iOS/Main.cs" line="22" column="13" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
