@@ -14,5 +14,21 @@
   <ItemGroup>
     <None Remove="Xamarin.CommunityToolkit" />
     <None Remove="YoutubeExplode" />
+    <None Remove="Services\Fonts\" />
+    <None Remove="Services\Fonts\DMSans-Bold.ttf" />
+    <None Remove="Services\Fonts\DMSans-Regular.ttf" />
+    <None Remove="Services\Fonts\fa-solid-900.ttf" />
+    <None Remove="Services\Fonts\ProductSans-Regular.ttf" />
+    <None Remove="Services\Fonts\RobotoMono-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Services\Fonts\DMSans-Bold.ttf" />
+    <EmbeddedResource Include="Services\Fonts\DMSans-Regular.ttf" />
+    <EmbeddedResource Include="Services\Fonts\fa-solid-900.ttf" />
+    <EmbeddedResource Include="Services\Fonts\ProductSans-Regular.ttf" />
+    <EmbeddedResource Include="Services\Fonts\RobotoMono-Regular.ttf" />
   </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@ using YoutubeExplode;
 using YoutubeExplode.Videos.Streams;
 using Xamarin.CommunityToolkit.UI.Views;
 
+[assembly: ExportFont("fa-solid-900.ttf", Alias = "FontAwesome")]
 namespace XamarinTestApp.Views
 {
     public partial class AboutPage : ContentPage
